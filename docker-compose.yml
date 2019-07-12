@@ -1,0 +1,13 @@
+# docker-compose.yml
+version: '3'
+
+services:
+  go:
+    image: test-api-gae
+    volumes:
+      - .:/go/src/myapp
+    ports:
+      - 8080:8080
+      - 8000:8000
+    restart: 'no'
+    command: dev_appserver.py /go/src/myapp/service/app.yaml --host=0.0.0.0 --admin_host=0.0.0.0 --support_datastore_emulator=False
