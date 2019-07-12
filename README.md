@@ -8,3 +8,7 @@ depを使用...
 
 * run
 `docker-compose up`
+
+### TODO
+venderは`.gitignore`するようにする
+
